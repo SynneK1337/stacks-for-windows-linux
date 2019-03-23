@@ -49,10 +49,11 @@ if __name__ == "__main__":
   os.chdir(getDesktopPath())  # cd ~/Desktop
   createFolders(file_type_by_extension)
   files = getDesktopFiles()   # ls
-  for file in files:
-    if os.name == "nt":
-      if getFileType(file, file_type_by_extension):
-        os.rename(file, (getFileType(file, file_type_by_extension)+"\\"+file))
+  if os.name == "nt":
+      for file in files:
+          if getFileType(file, file_type_by_extension):
+            os.rename(file, (getFileType(file, file_type_by_extension)+"\\"+file))
     else:
-      if getFileType(file, file_type_by_extension):
-        os.rename(file, (getFileType(file, file_type_by_extension)+"/"+file))
+      for file in files:
+        if getFileType(file, file_type_by_extension):
+          os.rename(file, (getFileType(file, file_type_by_extension)+"/"+file))
