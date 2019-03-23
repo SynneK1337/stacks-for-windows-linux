@@ -50,10 +50,10 @@ if __name__ == "__main__":
   createFolders(file_type_by_extension)
   files = getDesktopFiles()   # ls
   if os.name == "nt":
-      for file in files:
-          if getFileType(file, file_type_by_extension):
-            os.rename(file, (getFileType(file, file_type_by_extension)+"\\"+file))
-    else:
-      for file in files:
-        if getFileType(file, file_type_by_extension):
-          os.rename(file, (getFileType(file, file_type_by_extension)+"/"+file))
+    for file in files:
+      if getFileType(file, file_type_by_extension):
+        os.rename(file, (getFileType(file, file_type_by_extension)+"\\"+file))
+  else:
+    for file in files:
+      if getFileType(file, file_type_by_extension):
+        os.rename(file, (getFileType(file, file_type_by_extension)+"/"+file))
