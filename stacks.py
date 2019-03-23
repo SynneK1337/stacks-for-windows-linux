@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 import pathlib
 
@@ -21,39 +22,25 @@ file_type_by_extension = {'images':
                           }
 
 
-def getDesktopPath():
-  if (os.name == 'nt'):
-    return os.getenv('HOME')+'\\Desktop\\'  # Windows
-  else:
-    return os.getenv('HOME')+'/Desktop/'    # *NIX
+def get_desktop_path():
+  return os.path.expanduser("~/Desktop")
 
 
-def getDesktopFiles():
-  return os.listdir()
-
-
-def getFileType(file, types): # types = file_type_by_extension
+def get_file_type(file, types):  # types = file_type_by_extension
   for type, extension in types.items():
     if pathlib.Path(file).suffix.lower() in extension:
       return type
 
-def createFolders(types):     # types = file_type_by_extension
-  for type in types:
-    try:
-      os.mkdir(type)
-    except:
-      pass
+
+def create_folders(types):     # types = file_type_by_extension
+  for type_ in types:
+    os.makedirs(type_, exist_ok=True)
 
 
 if __name__ == "__main__":
-  os.chdir(getDesktopPath())  # cd ~/Desktop
-  createFolders(file_type_by_extension)
-  files = getDesktopFiles()   # ls
-  if os.name == "nt":
-    for file in files:
-      if getFileType(file, file_type_by_extension):
-        os.rename(file, (getFileType(file, file_type_by_extension)+"\\"+file))
-  else:
-    for file in files:
-      if getFileType(file, file_type_by_extension):
-        os.rename(file, (getFileType(file, file_type_by_extension)+"/"+file))
+  os.chdir(get_desktop_path())  # cd ~/Desktop
+  create_folders(file_type_by_extension)
+  files = os.listdir()   # ls
+  for file in files:
+    if get_file_type(file, file_type_by_extension):
+      os.rename(file, os.path.join(get_file_type(file, file_type_by_extension), file))
