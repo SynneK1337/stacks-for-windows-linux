@@ -2,21 +2,21 @@ import os
 import pathlib
 
 file_type_by_extension = {'images':
-                          ['.jpg', '.jpeg', '.jfif', '.jpe', '.jif', '.jfi'      # JPEG
-                           '.jp2', '.j2k', '.jpf', '.jpx', 'jpm', 'mj2'          # JPEG 2000
-                           '.tiff', '.tif'                                       # TIFF
-                           '.gif'                                                # GIF
-                           '.bmp', '.dib'                                        # BMP
-                           '.png'                                                # PNG
-                           '.pbm', '.pgm', '.ppm', '.pnm',                       # PPM
-                           '.webp'                                               # WebP
-                           '.heif', '.heic'                                      # HEIF
-                           '.3fr', '.ari', '.arw', '.srf', '.sr2', '.bay'        # RAW
-                           '.crw', '.cr2', '.cap', '.iiq', '.eip', '.dcs'        # RAW
-                           '.dcr', '.drf', '.k25', '.kdc', '.dng', '.erf'        # RAW
-                           '.fff', '.mef', '.mos', '.mrw', '.nef', '.nrw'        # RAW
-                           '.orf', '.ptx', '.pef', '.pxn', '.r3d', '.raf'        # RAW
-                           '.raw', '.rw2', '.rw1' '.rwz', '.x3f'                 # RAW
+                          ['.jpg', '.jpeg', '.jfif', '.jpe', '.jif', '.jfi',      # JPEG
+                           '.jp2', '.j2k', '.jpf', '.jpx', 'jpm', 'mj2',          # JPEG 2000
+                           '.tiff', '.tif',                                       # TIFF
+                           '.gif',                                                # GIF
+                           '.bmp', '.dib',                                        # BMP
+                           '.png',                                                # PNG
+                           '.pbm', '.pgm', '.ppm', '.pnm',                        # PPM
+                           '.webp',                                               # WebP
+                           '.heif', '.heic',                                      # HEIF
+                           '.3fr', '.ari', '.arw', '.srf', '.sr2', '.bay',        # RAW
+                           '.crw', '.cr2', '.cap', '.iiq', '.eip', '.dcs',        # RAW
+                           '.dcr', '.drf', '.k25', '.kdc', '.dng', '.erf',        # RAW
+                           '.fff', '.mef', '.mos', '.mrw', '.nef', '.nrw',        # RAW
+                           '.orf', '.ptx', '.pef', '.pxn', '.r3d', '.raf',        # RAW
+                           '.raw', '.rw2', '.rw1', '.rwz', '.x3f'                 # RAW
                            ]
                           }
 
