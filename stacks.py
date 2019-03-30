@@ -43,15 +43,15 @@ file_type_by_extension = {
         '.hpp', '.hxx', '.h++', '.py', '.pyc', '.c',
         '.java', '.class', '.bash', '.sh', '.bat', '.ps1',
         '.perl', '.asm', '.S', '.js', '.html', '.css',
-        '.scss', '.ts', '.go', '.rs', '.json'
+        '.scss', '.ts', '.go', '.rs', '.json', '.bin'
     ],
     'documents': [
         '.txt', '.doc', '.docx', '.pptx', '.ppt', '.xls',
         '.xlsx', '.md', '.pdf', '.odt', '.ods', '.odp',
         '.odf', '.odb'
     ],
-    'binaries': [
-        '.exe', '.elf', '.bin'
+    'Apps': [
+        '.exe', '.elf', '.lnk'
     ]
 }
 
