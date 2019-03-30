@@ -3,7 +3,7 @@ import os
 import pathlib
 
 file_type_by_extension = {
-    'images': [
+    'Images': [
         '.jpg', '.jpeg', '.jfif', '.jpe', '.jif', '.jfi',      
         '.jp2', '.j2k', '.jpf', '.jpx', 'jpm', 'mj2',          
         '.tiff', '.tif',                                       
@@ -20,7 +20,7 @@ file_type_by_extension = {
         '.orf', '.ptx', '.pef', '.pxn', '.r3d', '.raf',        
         '.raw', '.rw2', '.rw1', '.rwz', '.x3f'                 
     ],
-    'videos': [
+    'Videos': [
         '.webm', '.mkv', '.flv', '.vob', '.ogv' '.ogg',
         '.drc', '.gifv', '.mng', '.avi', '.mts', '.m2ts',
         '.mov', '.qt', '.wmv', '.yuv', '.rm', '.rmvb',
@@ -29,7 +29,7 @@ file_type_by_extension = {
         '.svi', '.3gp', '.3g2', '.mxf', '.roq', '.nsv',
         '.fl4', '.f4p', '.f4v', '.f4a', '.f4b'
     ],
-    'audio': [
+    'Audio': [
         '.3gp', '.aa', '.aac', '.aax', '.act', '.aiff',
         '.amr', '.ape', '.au', '.awb', '.dct', '.dss',
         '.dvf', '.flac', '.gsm', '.iklax', '.ivs', '.m4a',
@@ -38,20 +38,27 @@ file_type_by_extension = {
         '.ra', '.rm', '.tta', '.vox', '.wav', '.wma',
         '.wv', '.webm', '.8svx'
     ],
-    'source codes': [
+    'Source codes': [
         '.C', '.cc', '.cpp', '.cxx', '.c++', '.h', '.hh',
         '.hpp', '.hxx', '.h++', '.py', '.pyc', '.c',
         '.java', '.class', '.bash', '.sh', '.bat', '.ps1',
         '.perl', '.asm', '.S', '.js', '.html', '.css',
         '.scss', '.ts', '.go', '.rs', '.json', '.bin'
     ],
-    'documents': [
+    'Documents': [
         '.txt', '.doc', '.docx', '.pptx', '.ppt', '.xls',
         '.xlsx', '.md', '.pdf', '.odt', '.ods', '.odp',
         '.odf', '.odb'
     ],
     'Apps': [
-        '.exe', '.elf', '.lnk'
+        '.exe', '.elf', '.lnk', '.msi'
+    ],
+    'Archives': [
+        '.zip', '.rar', '.7z', '.gz', '.bz2', '.Z', '.lzma',
+        '.tar', '.xz'
+    ],
+    'Adobe files': [
+        '.psd', '.aep', '.prproj', '.ai', '.xd'
     ]
 }
 
