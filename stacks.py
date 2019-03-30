@@ -2,33 +2,58 @@
 import os
 import pathlib
 
-file_type_by_extension = {'images':
-                          ['.jpg', '.jpeg', '.jfif', '.jpe', '.jif', '.jfi',      # JPEG
-                           '.jp2', '.j2k', '.jpf', '.jpx', 'jpm', 'mj2',          # JPEG 2000
-                           '.tiff', '.tif',                                       # TIFF
-                           '.gif',                                                # GIF
-                           '.bmp', '.dib',                                        # BMP
-                           '.png',                                                # PNG
-                           '.pbm', '.pgm', '.ppm', '.pnm',                        # PPM
-                           '.webp',                                               # WebP
-                           '.heif', '.heic',                                      # HEIF
-                           '.3fr', '.ari', '.arw', '.srf', '.sr2', '.bay',        # RAW
-                           '.crw', '.cr2', '.cap', '.iiq', '.eip', '.dcs',        # RAW
-                           '.dcr', '.drf', '.k25', '.kdc', '.dng', '.erf',        # RAW
-                           '.fff', '.mef', '.mos', '.mrw', '.nef', '.nrw',        # RAW
-                           '.orf', '.ptx', '.pef', '.pxn', '.r3d', '.raf',        # RAW
-                           '.raw', '.rw2', '.rw1', '.rwz', '.x3f'                 # RAW
-                           ],
-                          'videos':
-                          ['.webm', '.mkv', '.flv', '.vob', '.ogv' '.ogg',
-                           '.drc', '.gifv', '.mng', '.avi', '.mts', '.m2ts',
-                           '.mov', '.qt', '.wmv', '.yuv', '.rm', '.rmvb',
-                           '.asf', '.amv', '.mp4', '.m4p', '.m4v', '.mpg',
-                           '.mp2', '.mpeg', '.mpe', '.mpv', '.m2v', '.m4v',
-                           '.svi', '.3gp', '.3g2', '.mxf', '.roq', '.nsv',
-                           '.fl4', '.f4p', '.f4v', '.f4a', '.f4b'
-                           ],
-                          }
+file_type_by_extension = {
+    'images': [
+        '.jpg', '.jpeg', '.jfif', '.jpe', '.jif', '.jfi',      
+        '.jp2', '.j2k', '.jpf', '.jpx', 'jpm', 'mj2',          
+        '.tiff', '.tif',                                       
+        '.gif',                                                
+        '.bmp', '.dib',                                        
+        '.png',                                                
+        '.pbm', '.pgm', '.ppm', '.pnm',                        
+        '.webp',                                               
+        '.heif', '.heic',                                      
+        '.3fr', '.ari', '.arw', '.srf', '.sr2', '.bay',        
+        '.crw', '.cr2', '.cap', '.iiq', '.eip', '.dcs',        
+        '.dcr', '.drf', '.k25', '.kdc', '.dng', '.erf',        
+        '.fff', '.mef', '.mos', '.mrw', '.nef', '.nrw',        
+        '.orf', '.ptx', '.pef', '.pxn', '.r3d', '.raf',        
+        '.raw', '.rw2', '.rw1', '.rwz', '.x3f'                 
+    ],
+    'videos': [
+        '.webm', '.mkv', '.flv', '.vob', '.ogv' '.ogg',
+        '.drc', '.gifv', '.mng', '.avi', '.mts', '.m2ts',
+        '.mov', '.qt', '.wmv', '.yuv', '.rm', '.rmvb',
+        '.asf', '.amv', '.mp4', '.m4p', '.m4v', '.mpg',
+        '.mp2', '.mpeg', '.mpe', '.mpv', '.m2v', '.m4v',
+        '.svi', '.3gp', '.3g2', '.mxf', '.roq', '.nsv',
+        '.fl4', '.f4p', '.f4v', '.f4a', '.f4b'
+    ],
+    'audio': [
+        '.3gp', '.aa', '.aac', '.aax', '.act', '.aiff',
+        '.amr', '.ape', '.au', '.awb', '.dct', '.dss',
+        '.dvf', '.flac', '.gsm', '.iklax', '.ivs', '.m4a',
+        '.m4b', '.m4p', '.mmf', '.mp3', '.mpc', '.msv',
+        '.nmf', '.nsf', '.ogg', '.oga', '.mogg', '.opus',
+        '.ra', '.rm', '.tta', '.vox', '.wav', '.wma',
+        '.wv', '.webm', '.8svx'
+    ],
+    'source codes': [
+        '.C', '.cc', '.cpp', '.cxx', '.c++', '.h', '.hh',
+        '.hpp', '.hxx', '.h++', '.py', '.pyc', '.c',
+        '.java', '.class', '.bash', '.sh', '.bat', '.ps1',
+        '.perl', '.asm', '.S', '.js', '.html', '.css',
+        '.scss', '.ts', '.go', '.rs', '.json'
+    ],
+    'documents': [
+        '.txt', '.doc', '.docx', '.pptx', '.ppt', '.xls',
+        '.xlsx', '.md', '.pdf', '.odt', '.ods', '.odp',
+        '.odf', '.odb'
+    ],
+    'binaries': [
+        '.exe', '.elf', '.bin'
+    ]
+}
 
 
 def get_desktop_path():
