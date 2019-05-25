@@ -11,11 +11,8 @@ in ```~/Desktop``` *(even on macOS lmao)*
 * python 3.4 or later
 
 ## Usage
-```python stacks.py```
-
-## TODO
-* Add more types of files
-* Write unstack function
+* ```python stacks.py --stack``` to stack files.
+* ```python stacks.py --unstack``` to unstack files.
 
 ## Special thanks to
 [disconnect3d](https://github.com/disconnect3d) for giving me some tips about this script

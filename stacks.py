@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import pathlib
+from sys import argv
 
 file_type_by_extension = {
     'Images': [
@@ -78,10 +79,9 @@ def create_folders(types):     # types = file_type_by_extension
         os.makedirs(type_, exist_ok=True)
 
 
-if __name__ == "__main__":
-    os.chdir(get_desktop_path())  # cd ~/Desktop
+def stack():
     create_folders(file_type_by_extension)
-    files = os.listdir()   # ls
+    files = os.listdir()
     for file in files:
         if get_file_type(file, file_type_by_extension):
             os.rename(file, os.path.join(get_file_type(file,
@@ -89,3 +89,26 @@ if __name__ == "__main__":
     for folder in file_type_by_extension:
         if not os.listdir(folder):
             os.removedirs(folder)
+
+
+def unstack():
+    for folder_name in file_type_by_extension:
+        try:
+            os.chdir(folder_name)
+        except FileNotFoundError:
+            print(f"{folder_name} not found.")
+        else:
+            for file in os.listdir():
+                os.rename(file, os.path.join('..', file))
+            os.chdir('..')
+            os.removedirs(folder_name)
+
+
+if __name__ == "__main__":
+    os.chdir(get_desktop_path())
+    if "--stack" in argv:
+        stack()
+    elif "--unstack" in argv:
+        unstack()
+    else:
+        print("Error: Argument missing.")
