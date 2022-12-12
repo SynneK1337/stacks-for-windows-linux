@@ -13,6 +13,7 @@ in ```~/Desktop``` *(even on macOS lmao)*
 ## Usage
 * ```python stacks.py --stack``` to stack files.
 * ```python stacks.py --unstack``` to unstack files.
+* To make life easier, create a new folder in your user folder and add the bat files. Then, add the folder to PATH so you can use cmd to edit anytime you want. :D
 
 ## Special thanks to
 [disconnect3d](https://github.com/disconnect3d) for giving me some tips about this script
