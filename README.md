@@ -13,6 +13,9 @@ in ```~/Desktop``` *(even on macOS lmao)*
 ## Usage
 * ```python stacks.py --stack``` to stack files.
 * ```python stacks.py --unstack``` to unstack files.
+* To make life easier on Windows, you can use stacking.exe along side with 
 
 ## Special thanks to
 [disconnect3d](https://github.com/disconnect3d) for giving me some tips about this script
+
+[themediocredev](https://github.com/themediocredev) for adding extra steps and a bat file. 
