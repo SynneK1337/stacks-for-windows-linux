@@ -13,9 +13,9 @@ in ```~/Desktop``` *(even on macOS lmao)*
 ## Usage
 * ```python stacks.py --stack``` to stack files.
 * ```python stacks.py --unstack``` to unstack files.
-* To make life easier, create a new folder in your user folder and add the bat files. Then, add the folder to PATH so you can use cmd to edit anytime you want. :D
-* Soon, I'll see if I can make a toggle file in batch to add to regedit so you can add it to the right click menu bar. 
+* To make life easier on Windows, you can use stacking.exe along side with 
 
 ## Special thanks to
 [disconnect3d](https://github.com/disconnect3d) for giving me some tips about this script
+
 [themediocredev](https://github.com/themediocredev) for adding extra steps and a bat file. 
